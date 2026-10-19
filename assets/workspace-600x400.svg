@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+<defs><linearGradient id="desk" x2="1" y2="1"><stop stop-color="#19314a"/><stop offset="1" stop-color="#0b1324"/></linearGradient><linearGradient id="screen" x2="0" y2="1"><stop stop-color="#1d3b54"/><stop offset="1" stop-color="#0e182d"/></linearGradient></defs>
+<rect width="600" height="400" rx="20" fill="url(#desk)"/><circle cx="513" cy="74" r="36" fill="#c9ff6b" opacity=".9"/><circle cx="513" cy="74" r="17" fill="#19314a"/>
+<rect x="109" y="45" width="380" height="243" rx="15" fill="#e6eff8"/><rect x="124" y="60" width="350" height="211" rx="7" fill="url(#screen)"/><rect x="124" y="60" width="350" height="28" rx="7" fill="#dce7f1"/><circle cx="140" cy="74" r="4" fill="#ed7b73"/><circle cx="154" cy="74" r="4" fill="#f4c55b"/><circle cx="168" cy="74" r="4" fill="#63ddb2"/>
+<g font-family="monospace" font-size="13"><text x="146" y="115" fill="#c9ff6b">&lt;main&gt;</text><text x="165" y="141" fill="#62e7cc">&lt;section&gt;</text><text x="185" y="167" fill="#d5e5ff">content goes here</text><text x="165" y="193" fill="#62e7cc">&lt;/section&gt;</text><text x="146" y="219" fill="#c9ff6b">&lt;/main&gt;</text></g>
+<path d="M265 289h68l17 37H248z" fill="#b9c9da"/><rect x="219" y="326" width="162" height="15" rx="7" fill="#e1ebf5"/>
+<rect x="35" y="292" width="115" height="65" rx="9" fill="#62e7cc"/><rect x="45" y="302" width="95" height="45" rx="5" fill="#19314a"/><path d="M62 316h51M62 327h35M62 338h44" stroke="#c9ff6b" stroke-width="4" stroke-linecap="round"/>
+<rect x="416" y="309" width="125" height="43" rx="8" fill="#c9ff6b"/><path d="M435 326h88M435 338h52" stroke="#19314a" stroke-width="5" stroke-linecap="round"/>
+</svg>

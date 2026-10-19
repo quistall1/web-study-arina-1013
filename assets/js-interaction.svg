@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430">
+<rect width="720" height="430" rx="28" fill="#13223b"/><circle cx="530" cy="128" r="92" fill="#213b5a"/><circle cx="530" cy="128" r="55" fill="#62e7cc"/><circle cx="530" cy="128" r="24" fill="#13223b"/>
+<rect x="61" y="65" width="337" height="300" rx="18" fill="#eff5fb"/><rect x="61" y="65" width="337" height="47" rx="18" fill="#d5e2ef"/><circle cx="87" cy="88" r="6" fill="#f47e72"/><circle cx="108" cy="88" r="6" fill="#f8c65c"/>
+<rect x="87" y="137" width="284" height="51" rx="9" fill="#d4fff0"/><text x="105" y="169" fill="#143c36" font-family="monospace" font-size="19">addEventListener()</text><rect x="87" y="206" width="198" height="12" rx="6" fill="#c4d3e4"/><rect x="87" y="231" width="237" height="12" rx="6" fill="#c4d3e4"/><rect x="87" y="267" width="140" height="48" rx="12" fill="#c9ff6b"/><text x="108" y="297" fill="#10203a" font-family="Arial,sans-serif" font-weight="700" font-size="16">Нажать</text>
+<path d="M384 290l24 13-14 4-6 15z" fill="#ffffff" stroke="#10203a" stroke-width="3"/><path d="M413 323l16 14M425 309l22 3M412 341l4 18" stroke="#c9ff6b" stroke-width="5" stroke-linecap="round"/>
+</svg>
