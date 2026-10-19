@@ -1,4 +1,58 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML — WEB LAB</title><link rel="stylesheet" href="css/style.css"></head><body data-page="html"><header class="site-header" id="top"><div class="header-inner"><a class="brand" href="index.html">WEB LAB</a><nav class="main-nav"><a href="index.html">Главная</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="js.html">JavaScript</a><a href="workflow.html">Процесс</a><a href="gallery.html">Галерея</a><a href="forms.html">Формы</a><a href="passport-dom.html">DOM</a><a href="passport-latin.html">Латиница</a><a href="task.html">Задача 1013</a></nav></div></header><main class="page-shell"><section class="card"><span class="eyebrow">Информационный раздел</span><h1>HTML — структура страницы</h1><p class="lead">HTML описывает смысл и структуру содержимого веб-страницы.</p><nav class="anchor-nav"><a href="#semantic">Семантика</a><a href="#elements">Элементы</a><a href="#top">К началу ↑</a></nav></section><section class="card" id="semantic"><h2>Семантическая разметка</h2><p>Семантические теги показывают назначение блоков: шапка, навигация, основное содержимое и подвал. Это делает структуру документа понятнее для разработчиков и вспомогательных технологий.</p><ol><li><b>Заголовки</b> задают иерархию от h1 до h6.</li><li><b>Основные области:</b><ul><li><code>header</code> — шапка;</li><li><code>nav</code> — навигация;</li><li><code>main</code> — основное содержимое;</li><li><code>footer</code> — подвал.</li></ul></li><li>Используйте списки для перечислений.</li></ol><figure class="illustration"><img src="assets/html-structure.svg" alt="Иллюстрация структуры HTML"><figcaption>Рисунок 1. Схема структуры документа.</figcaption></figure></section><section class="card" id="elements"><h2>Ссылки и изображения</h2><p>Ссылки создаются с помощью <code>a</code>, адрес хранится в <code>href</code>. Для открытия внешней ссылки в новой вкладке используйте <code>target="_blank"</code> и <code>rel="noopener noreferrer"</code>.</p><pre><code>&lt;main&gt;
-  &lt;h1&gt;Заголовок&lt;/h1&gt;
-  &lt;p&gt;Текст страницы&lt;/p&gt;
-&lt;/main&gt;</code></pre><ul><li>Укажите язык документа и кодировку.</li><li>Добавьте понятный заголовок страницы.</li><li>Предоставляйте изображениям осмысленный alt-текст.</li></ul><p><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Справочник HTML на MDN ↗</a></p></section><a class="back-top" href="#top">↑ К началу</a></main><footer class="site-footer"><div class="footer-inner">WEB LAB · Курбанова Арина</div></footer><script src="js/main.js" defer></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="html.html" id="top">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/logo.svg" alt="На главную" width="32" height="32"></a>
+    <span>Сайт Курбановой Арины</span>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="js.html">JavaScript</a>
+      <a href="workflow.html">Процесс</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="forms.html">Формы</a>
+      <a href="passport-dom.html">DOM</a>
+      <a href="passport-latin.html">Латиница</a>
+      <a href="task.html">Задача 1013</a>
+      <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Справочник</a>
+    </nav>
+  </header>
+  <main class="container">
+    
+<h1>HTML — структура страницы</h1>
+<div class="anchor-nav"><a href="#section1">Раздел 1</a><a href="#section2">Раздел 2</a><a href="#top">К началу</a></div>
+<section id="section1">
+  <h2>Раздел 1. Основные теги</h2>
+  <p>HTML задаёт структуру страницы. Теги помогают браузеру понять, где находятся заголовки, текст, ссылки, списки и изображения.</p>
+  <ol>
+    <li><code>h1</code> — главный заголовок.</li>
+    <li><code>p</code> — абзац текста.</li>
+    <li><code>a</code> — ссылка на другую страницу.</li>
+  </ol>
+  <figure><img src="assets/html-structure.svg" alt="Схема основных частей HTML" width="600"><figcaption>Основные части веб-страницы.</figcaption></figure>
+</section>
+<section id="section2">
+  <h2>Раздел 2. Списки</h2>
+  <p>Списки бывают нумерованными и маркированными.</p>
+  <ul>
+    <li>Структура документа
+      <ul><li>Заголовок</li><li>Основная часть</li><li>Подвал</li></ul>
+    </li>
+    <li>Ссылки и картинки</li>
+  </ul>
+  <p>Подробнее: <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">справочник HTML</a>.</p>
+</section>
+
+  </main>
+  <footer>Курбанова Арина · БЮРЦЮ252</footer>
+  <script src="js/main.js" defer></script>
+  
+</body>
+</html>

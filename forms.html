@@ -1,1 +1,55 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Формы — WEB LAB</title><link rel="stylesheet" href="css/style.css"></head><body data-page="forms"><header class="site-header" id="top"><div class="header-inner"><a class="brand" href="index.html">WEB LAB</a><nav class="main-nav"><a href="index.html">Главная</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="js.html">JavaScript</a><a href="workflow.html">Процесс</a><a href="gallery.html">Галерея</a><a href="forms.html">Формы</a><a href="passport-dom.html">DOM</a><a href="passport-latin.html">Латиница</a><a href="task.html">Задача 1013</a></nav></div></header><main class="page-shell"><section class="card"><span class="eyebrow">Практические элементы</span><h1>HTML-формы</h1><p class="lead">Форма объединяет именованные поля и отправляет их значения серверу выбранным методом.</p><p class="notice">Демонстрация использует внешний сервис httpbin.org. Не вводите настоящие пароли или чувствительные данные.</p></section><section class="form-layout"><form class="form-card" action="https://httpbin.org/post" method="post" target="_blank"><h2>Форма обратной связи</h2><label class="field">Имя<input type="text" name="name" value="Арина" required></label><label class="field">Электронная почта<input type="email" name="email" value="arina@example.com" required></label><label class="field">Дата обращения<input type="date" id="sent-date" name="date"></label><label class="field">Сообщение<textarea name="message" rows="4" placeholder="Текст сообщения"></textarea></label><input type="hidden" name="group" value="БЮРЦЮ252"><button type="submit">Отправить POST</button></form><form class="form-card" action="https://httpbin.org/post" method="post" target="_blank"><h2>Учебная заявка</h2><label class="field">ФИО<input type="text" name="student" value="Курбанова Арина" required></label><label class="field">Номер задачи<input type="number" name="task" min="1001" max="1018" value="1013" required></label><fieldset><legend>Формат обучения</legend><label class="choice"><input type="radio" name="format" value="online" checked> Онлайн</label><label class="choice"><input type="radio" name="format" value="offline"> Очно</label></fieldset><fieldset><legend>Что интересно</legend><label class="choice"><input type="checkbox" name="topic_html" value="yes" checked> HTML</label><label class="choice"><input type="checkbox" name="topic_css" value="yes"> CSS</label><label class="choice"><input type="checkbox" name="topic_js" value="yes"> JavaScript</label></fieldset><label class="field">Пароль (только тестовый)<input type="password" name="demo_password" value="demo1234" autocomplete="off"></label><button type="submit">Отправить заявку</button></form></section><a class="back-top" href="#top">↑ К началу</a></main><footer class="site-footer"><div class="footer-inner">WEB LAB · Курбанова Арина</div></footer><script src="js/main.js" defer></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HTML-формы</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="forms.html" id="top">
+<header><a class="logo" href="index.html"><img src="assets/logo.svg" alt="На главную" width="32" height="32"></a><span>Сайт Курбановой Арины</span>
+<nav><a href="index.html">Главная</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="js.html">JavaScript</a>
+<a href="workflow.html">Процесс</a>
+<a href="gallery.html">Галерея</a>
+<a href="forms.html">Формы</a>
+<a href="passport-dom.html">DOM</a>
+<a href="passport-latin.html">Латиница</a>
+<a href="task.html">Задача 1013</a><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Справочник</a></nav></header>
+<main class="container">
+<h1>HTML-формы</h1>
+<p>Формы отправляют введённые данные на демонстрационный сервер. Используются тестовые значения.</p>
+<section>
+<h2>1. Контактная форма</h2>
+<form action="https://httpbin.org/post" method="post" target="_blank">
+<label>Фамилия: <input type="text" name="surname" value="Курбанова" required></label>
+<label>Имя: <input type="text" name="first_name" value="Арина" required></label>
+<label>Группа: <input type="text" name="group" value="БЮРЦЮ252" required></label>
+<label>Мобильный телефон: <input type="text" name="mobile" value="+7 900 000-00-00"></label>
+<label>Электронная почта: <input type="email" name="email" value="arina@example.com" required></label>
+<label>Дата отправки: <input type="date" name="send_date" id="send-date" required></label>
+<input type="hidden" name="form_type" value="contact">
+<button type="submit">Отправить форму</button>
+</form>
+</section>
+<section>
+<h2>2. Форма отзыва о занятии</h2>
+<p>В форме показаны разные типы полей. Пароль ниже только учебный, не используйте настоящий пароль.</p>
+<form action="https://httpbin.org/post" method="post" target="_blank">
+<label>Название темы: <input type="text" name="topic" value="Основы HTML" required></label>
+<label>Оценка от 1 до 5: <input type="number" name="rating" min="1" max="5" value="5" required></label>
+<p>Порекомендовали бы занятие?</p>
+<label><input type="radio" name="recommend" value="yes" checked> Да</label>
+<label><input type="radio" name="recommend" value="no"> Нет</label>
+<p>Какие темы вы изучали?</p>
+<label><input type="checkbox" name="html" value="yes" checked> HTML</label>
+<label><input type="checkbox" name="css" value="yes" checked> CSS</label>
+<label><input type="checkbox" name="javascript" value="yes"> JavaScript</label>
+<label>Дата занятия: <input type="date" name="lesson_date" id="lesson-date" required></label>
+<label>Учебный пароль: <input type="password" name="demo_password" value="test123"></label>
+<input type="hidden" name="group" value="БЮРЦЮ252">
+<button type="submit">Отправить отзыв</button>
+</form>
+</section>
+<p class="warning">Не вводите реальные пароли. Ответ сервера откроется в новой вкладке; письмо на почту не отправляется.</p>
+</main>
+<footer>Курбанова Арина · БЮРЦЮ252</footer>
+<script src="js/main.js" defer></script>
+</body></html>

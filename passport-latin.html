@@ -1,1 +1,34 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Кириллица в латиницу — WEB LAB</title><link rel="stylesheet" href="css/style.css"></head><body data-page="passport-latin"><header class="site-header" id="top"><div class="header-inner"><a class="brand" href="index.html">WEB LAB</a><nav class="main-nav"><a href="index.html">Главная</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="js.html">JavaScript</a><a href="workflow.html">Процесс</a><a href="gallery.html">Галерея</a><a href="forms.html">Формы</a><a href="passport-dom.html">DOM</a><a href="passport-latin.html">Латиница</a><a href="task.html">Задача 1013</a></nav></div></header><main class="page-shell"><section class="card"><span class="eyebrow">Упражнение с событиями</span><h1>Кириллица → латиница</h1><p class="lead">Нажмите кнопку, чтобы изменить фамилию и имя на латинскую запись.</p></section><section class="passport-spread"><article class="passport-page"><h2>ДО КОНВЕРТАЦИИ</h2><p>Фамилия: <strong id="latin-surname">Курбанова</strong></p><p>Имя: <strong id="latin-name">Арина</strong></p><p>Год рождения: <strong>2007</strong></p></article><article class="passport-page"><h2>ПОСЛЕ КОНВЕРТАЦИИ</h2><p>Нажмите «Преобразовать», чтобы обновить поля на этой странице.</p><button id="convert-button" type="button">Преобразовать</button> <button class="button secondary" id="reset-button" type="button">Сбросить</button><p id="latin-status" class="status" aria-live="polite">Ожидание действия.</p></article></section><a class="back-top" href="#top">↑ К началу</a></main><footer class="site-footer"><div class="footer-inner">WEB LAB · Курбанова Арина</div></footer><script src="js/passport-latin.js" defer></script></body></html>
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Изменяем кириллицу на латиницу по клику</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="passport-latin.html" id="top"><header><a class="logo" href="index.html"><img src="assets/logo.svg" alt="На главную" width="32" height="32"></a><span>Сайт Курбановой Арины</span><nav><a href="index.html">Главная</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="js.html">JavaScript</a>
+<a href="workflow.html">Процесс</a>
+<a href="gallery.html">Галерея</a>
+<a href="forms.html">Формы</a>
+<a href="passport-dom.html">DOM</a>
+<a href="passport-latin.html">Латиница</a>
+<a href="task.html">Задача 1013</a><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Справочник</a></nav></header>
+<main class="container">
+<h1>Изменяем кириллицу на латиницу по клику</h1>
+<p>Нажмите кнопку, чтобы фамилия, имя и год рождения на учебном макете отображались латинскими символами.</p>
+<div class="passports">
+<section class="passport">
+<h2>Страница 2</h2>
+<p>Фамилия: <span class="surname">Курбанова</span></p>
+<p>Имя: <span class="first-name">Арина</span></p>
+<p>Год рождения: <span class="birth-year">2007</span></p>
+</section>
+<section class="passport">
+<h2>Страница 3</h2>
+<p>Фамилия: <span class="surname">Курбанова</span></p>
+<p>Имя: <span class="first-name">Арина</span></p>
+<p>Год рождения: <span class="birth-year">2007</span></p>
+</section>
+</div>
+<button type="button" id="convert">Изменить на латиницу</button>
+<button type="button" id="reset">Вернуть кириллицу</button>
+<p id="latin-result" class="result">Пока ничего не изменено.</p>
+<p class="warning">Это учебный макет, а не официальный документ.</p>
+</main><footer>Курбанова Арина · БЮРЦЮ252</footer><script src="js/main.js" defer></script><script src="js/passport-latin.js" defer></script></body></html>

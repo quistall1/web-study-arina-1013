@@ -1,5 +1,52 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSS — WEB LAB</title><link rel="stylesheet" href="css/style.css"></head><body data-page="css"><header class="site-header" id="top"><div class="header-inner"><a class="brand" href="index.html">WEB LAB</a><nav class="main-nav"><a href="index.html">Главная</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="js.html">JavaScript</a><a href="workflow.html">Процесс</a><a href="gallery.html">Галерея</a><a href="forms.html">Формы</a><a href="passport-dom.html">DOM</a><a href="passport-latin.html">Латиница</a><a href="task.html">Задача 1013</a></nav></div></header><main class="page-shell"><section class="card"><span class="eyebrow">Информационный раздел</span><h1>CSS — оформление интерфейса</h1><p class="lead">CSS задаёт цвета, размеры, расположение блоков и реакцию элементов на разные размеры экрана.</p><nav class="anchor-nav"><a href="#cascade">Каскад</a><a href="#layout">Макет</a><a href="#top">К началу ↑</a></nav></section><section class="card" id="cascade"><h2>Селекторы и каскад</h2><p>Правила CSS состоят из селектора и деклараций. Каскад определяет, какое из конфликтующих правил применяется с учётом специфичности и порядка.</p><ol><li>Селектор тега — например <code>p</code>.</li><li>Класс — например <code>.card</code>.</li><li>Идентификатор — например <code>#main</code>.</li></ol><pre><code>.card {
-  padding: 24px;
-  border-radius: 16px;
-  background: white;
-}</code></pre><figure class="illustration"><img src="assets/css-layers.svg" alt="Схема визуальных слоёв CSS"><figcaption>Рисунок 2. Визуальные параметры задаются правилами CSS.</figcaption></figure></section><section class="card" id="layout"><h2>Адаптивные макеты</h2><p>Flexbox удобен для выравнивания в одном направлении, а Grid — для двумерной сетки. Медиа-запросы позволяют перестраивать колонки на узком экране.</p><ul><li>Используйте относительные единицы там, где это полезно.</li><li>Проверяйте контраст текста.</li><li>Не допускайте горизонтальной прокрутки всей страницы.</li></ul><p><a href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank" rel="noopener noreferrer">Справочник CSS на MDN ↗</a></p></section><a class="back-top" href="#top">↑ К началу</a></main><footer class="site-footer"><div class="footer-inner">WEB LAB · Курбанова Арина</div></footer><script src="js/main.js" defer></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="css.html" id="top">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/logo.svg" alt="На главную" width="32" height="32"></a>
+    <span>Сайт Курбановой Арины</span>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="js.html">JavaScript</a>
+      <a href="workflow.html">Процесс</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="forms.html">Формы</a>
+      <a href="passport-dom.html">DOM</a>
+      <a href="passport-latin.html">Латиница</a>
+      <a href="task.html">Задача 1013</a>
+      <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Справочник</a>
+    </nav>
+  </header>
+  <main class="container">
+    
+<h1>CSS — оформление страницы</h1>
+<div class="anchor-nav"><a href="#section1">Раздел 1</a><a href="#section2">Раздел 2</a><a href="#top">К началу</a></div>
+<section id="section1">
+  <h2>Раздел 1. Для чего нужен CSS</h2>
+  <p>CSS отвечает за цвета, размеры, отступы и расположение элементов. Правила состоят из селектора и свойств.</p>
+  <pre><code>p {
+  color: blue;
+  font-size: 16px;
+}</code></pre>
+  <figure><img src="assets/css-layers.svg" alt="Пример оформления элементов" width="600"><figcaption>Пример цветов и размеров элементов.</figcaption></figure>
+</section>
+<section id="section2">
+  <h2>Раздел 2. Основные свойства</h2>
+  <ol><li>color — цвет текста.</li><li>background — фон.</li><li>margin и padding — отступы.</li></ol>
+  <p>CSS позволяет сделать страницу удобной для чтения и на телефоне, и на компьютере.</p>
+  <p>Подробнее: <a href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank" rel="noopener noreferrer">справочник CSS</a>.</p>
+</section>
+
+  </main>
+  <footer>Курбанова Арина · БЮРЦЮ252</footer>
+  <script src="js/main.js" defer></script>
+  
+</body>
+</html>

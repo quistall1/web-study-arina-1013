@@ -1,1 +1,17 @@
-(()=>{'use strict';const page=document.body.dataset.page;document.querySelectorAll('.main-nav a').forEach(a=>{if(a.dataset.page===page){a.classList.add('active');a.setAttribute('aria-current','page')}});document.querySelectorAll('[data-year]').forEach(e=>e.textContent=String(new Date().getFullYear()));const date=document.getElementById('sent-date');if(date){const d=new Date();date.value=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}})();
+// Подсветка текущей страницы и заполнение дат в формах.
+const currentPage = document.body.dataset.page;
+document.querySelectorAll("header nav a").forEach(function (link) {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});
+
+const today = new Date();
+const dateValue = today.getFullYear() + "-" +
+  String(today.getMonth() + 1).padStart(2, "0") + "-" +
+  String(today.getDate()).padStart(2, "0");
+
+["send-date", "lesson-date"].forEach(function (id) {
+  const field = document.getElementById(id);
+  if (field) field.value = dateValue;
+});

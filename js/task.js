@@ -1,1 +1,30 @@
-(()=>{'use strict';const form=document.getElementById('task-form'),xInput=document.getElementById('input-X'),yInput=document.getElementById('input-Y'),text=document.getElementById('task-result-text'),formula=document.getElementById('task-formula'),status=document.getElementById('task-status');const fmt=n=>n.toLocaleString('ru-RU',{maximumFractionDigits:8,useGrouping:false});form.addEventListener('submit',e=>{e.preventDefault();if(xInput.value.trim()===''||yInput.value.trim()===''){status.textContent='ПРОВЕРЬТЕ ДАННЫЕ';text.textContent='Введите оба числа X и Y.';return}const x=Number(xInput.value),y=Number(yInput.value);if(!Number.isFinite(x)||!Number.isFinite(y)){status.textContent='ПРОВЕРЬТЕ ДАННЫЕ';text.textContent='X и Y должны быть конечными вещественными числами.';return}let z;if(x>y){z=x*y;formula.textContent='Так как X > Y: Z = '+fmt(x)+' · '+fmt(y)}else{const sum=x+y;if(sum<=0){status.textContent='НЕДОПУСТИМЫЕ ДАННЫЕ';text.textContent='Действительный логарифм не определён: X + Y должно быть больше нуля.';formula.textContent='Сейчас X + Y = '+fmt(sum);return}z=Math.log(sum);formula.textContent='Так как X ≤ Y: Z = ln('+fmt(sum)+')'}status.textContent='РАСЧЁТ ВЫПОЛНЕН';text.textContent='Результат: Z = '+fmt(z)+'.'});form.addEventListener('reset',()=>{setTimeout(()=>{text.textContent='Введите X и Y, затем нажмите «Рассчитать».';formula.textContent='Z = X · Y при X > Y; иначе Z = ln(X + Y).';status.textContent='ГОТОВО К РАСЧЁТУ'},0)})})();
+// Считаем Z по условию задачи 1013.
+document.getElementById("calculate-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const x = Number(document.getElementById("x").value);
+  const y = Number(document.getElementById("y").value);
+  let z;
+  let explanation;
+
+  if (x > y) {
+    z = x * y;
+    explanation = "Так как X > Y, используем Z = X * Y.";
+  } else {
+    if (x + y <= 0) {
+      document.getElementById("result").innerText =
+        "Ошибка: для ln(X + Y) сумма X + Y должна быть больше нуля.";
+      return;
+    }
+    z = Math.log(x + y);
+    explanation = "Так как X <= Y, используем Z = ln(X + Y).";
+  }
+
+  document.getElementById("result").innerText =
+    explanation + "\nРезультат Z = " + z;
+});
+
+document.getElementById("calculate-form").addEventListener("reset", function () {
+  document.getElementById("result").innerText =
+    "Введите X и Y и нажмите «Вычислить Z».";
+});

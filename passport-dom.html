@@ -1,3 +1,37 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DOM — учебный макет</title><link rel="stylesheet" href="css/style.css"></head><body data-page="passport-dom"><header class="site-header" id="top"><div class="header-inner"><a class="brand" href="index.html">WEB LAB</a><nav class="main-nav"><a href="index.html">Главная</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="js.html">JavaScript</a><a href="workflow.html">Процесс</a><a href="gallery.html">Галерея</a><a href="forms.html">Формы</a><a href="passport-dom.html">DOM</a><a href="passport-latin.html">Латиница</a><a href="task.html">Задача 1013</a></nav></div></header><main class="page-shell"><section class="card"><span class="eyebrow">Упражнение с DOM</span><h1>Получение данных из DOM</h1><p class="notice">Учебный макет, не документ. Использованы только данные для практики.</p></section><section class="passport-spread"><article class="passport-page"><h2>СВЕДЕНИЯ</h2><div class="passport-photo">Фото<br>учебное</div><p>Страна: <span>Россия</span></p><p>Документ: <span>Учебный макет</span></p><p>Фамилия: <span data-surname>Курбанова</span></p><p>Имя: <span data-name>Арина</span></p><p>Год рождения: <span data-year-birth>2007</span></p><div style="clear:both"></div><div class="passport-seal">ОБРАЗЕЦ</div></article><article class="passport-page"><h2>ДОПОЛНИТЕЛЬНО</h2><p>Страница: <span>2</span></p><p>Назначение: <span>Учебное задание по DOM</span></p><p>Группа: <span>БЮРЦЮ252</span></p><p>Данные условные и предназначены для демонстрации JavaScript.</p></article></section><section class="passport-output"><h2>Результат чтения DOM</h2><div id="dom-result" class="status">Считываем данные…</div><p id="dom-code-status">Скрипт прочитает фамилию, имя и год рождения из элементов страницы.</p></section><section class="card"><h2>Пример кода</h2><pre><code>const surname = document.querySelector('[data-surname]').textContent;
-const name = document.querySelector('[data-name]').textContent;
-const year = document.querySelector('[data-year-birth]').textContent;</code></pre></section><a class="back-top" href="#top">↑ К началу</a></main><footer class="site-footer"><div class="footer-inner">WEB LAB · Курбанова Арина</div></footer><script src="js/passport-dom.js" defer></script></body></html>
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>DOM_JS. Считываем информацию из DOM</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="passport-dom.html" id="top"><header><a class="logo" href="index.html"><img src="assets/logo.svg" alt="На главную" width="32" height="32"></a><span>Сайт Курбановой Арины</span><nav><a href="index.html">Главная</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="js.html">JavaScript</a>
+<a href="workflow.html">Процесс</a>
+<a href="gallery.html">Галерея</a>
+<a href="forms.html">Формы</a>
+<a href="passport-dom.html">DOM</a>
+<a href="passport-latin.html">Латиница</a>
+<a href="task.html">Задача 1013</a><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Справочник</a></nav></header>
+<main class="container">
+<h1>DOM_JS. Считываем информацию из DOM</h1>
+<p>Ниже находится простой учебный макет второй и третьей страниц паспорта. Это не настоящий документ.</p>
+<div class="passports">
+<section class="passport">
+<h2>Страница 2</h2>
+<p>Страна: <span>Россия</span></p>
+<p>Фамилия: <span>Курбанова</span></p>
+<p>Имя: <span>Арина</span></p>
+<p>Год рождения: <span>2007</span></p>
+</section>
+<section class="passport">
+<h2>Страница 3</h2>
+<p>Группа: <span>БЮРЦЮ252</span></p>
+<p>Назначение: <span>Учебная работа</span></p>
+<p>Все сведения на макете используются для практики с DOM.</p>
+</section>
+</div>
+<section>
+<h2>Полученные данные</h2>
+<div id="read-result" class="result">Значения появятся после загрузки страницы.</div>
+<p>В инструментах разработчика можно проверить выражение:</p>
+<pre><code>document.getElementsByTagName('p')[2].childNodes[1].innerText</code></pre>
+</section>
+</main><footer>Курбанова Арина · БЮРЦЮ252</footer><script src="js/main.js" defer></script><script src="js/passport-dom.js" defer></script></body></html>

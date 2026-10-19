@@ -1,1 +1,37 @@
-(()=>{'use strict';const surname=document.getElementById('latin-surname'),name=document.getElementById('latin-name'),status=document.getElementById('latin-status'),button=document.getElementById('convert-button'),reset=document.getElementById('reset-button');const original={surname:'Курбанова',name:'Арина'};const map={А:'A',Б:'B',В:'V',Г:'G',Д:'D',Е:'E',Ё:'E',Ж:'ZH',З:'Z',И:'I',Й:'Y',К:'K',Л:'L',М:'M',Н:'N',О:'O',П:'P',Р:'R',С:'S',Т:'T',У:'U',Ф:'F',Х:'KH',Ц:'TS',Ч:'CH',Ш:'SH',Щ:'SHCH',Ъ:'',Ы:'Y',Ь:'',Э:'E',Ю:'YU',Я:'YA'};const translit=s=>Array.from(s.toUpperCase(),c=>map[c]??c).join('');button.addEventListener('click',()=>{surname.textContent=translit(original.surname);name.textContent=translit(original.name);status.textContent='Фамилия и имя преобразованы в латинскую запись.'});reset.addEventListener('click',()=>{surname.textContent=original.surname;name.textContent=original.name;status.textContent='Исходная запись восстановлена.'})})();
+// Простая таблица замены русских букв на латинские.
+const letters = {
+  "а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ё":"yo",
+  "ж":"zh","з":"z","и":"i","й":"y","к":"k","л":"l","м":"m",
+  "н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u",
+  "ф":"f","х":"kh","ц":"ts","ч":"ch","ш":"sh","щ":"shch",
+  "ъ":"","ы":"y","ь":"","э":"e","ю":"yu","я":"ya"
+};
+
+function transliterate(text) {
+  return text.split("").map(function (letter) {
+    const translated = letters[letter.toLowerCase()];
+    if (translated === undefined) return letter;
+    return letter === letter.toUpperCase() ? translated.toUpperCase() : translated;
+  }).join("");
+}
+
+document.getElementById("convert").addEventListener("click", function () {
+  document.querySelectorAll(".surname").forEach(function (item) {
+    item.innerText = transliterate("Курбанова");
+  });
+  document.querySelectorAll(".first-name").forEach(function (item) {
+    item.innerText = transliterate("Арина");
+  });
+  document.querySelectorAll(".birth-year").forEach(function (item) {
+    item.innerText = transliterate("2007");
+  });
+  document.getElementById("latin-result").innerText =
+    "Фамилия, имя и год рождения записаны латинскими символами.";
+});
+
+document.getElementById("reset").addEventListener("click", function () {
+  document.querySelectorAll(".surname").forEach(item => item.innerText = "Курбанова");
+  document.querySelectorAll(".first-name").forEach(item => item.innerText = "Арина");
+  document.querySelectorAll(".birth-year").forEach(item => item.innerText = "2007");
+  document.getElementById("latin-result").innerText = "Исходные значения восстановлены.";
+});
